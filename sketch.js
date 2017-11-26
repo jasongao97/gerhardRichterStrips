@@ -1,13 +1,17 @@
 let CANVAS_WIDTH = document.documentElement.clientWidth - 160
 let CANVAS_HEIGHT = Math.min(document.documentElement.clientHeight - 400, CANVAS_WIDTH + 200)
 
-function getRandomColor(type) {
+function normal() {
+  return (Math.random() + Math.random()) / 2
+}
+
+function getRandomColor(where) {
   let Hue
   let choice = Math.round(Math.random())
   if (choice == 1) {
-    Hue = Math.random() * 55
+    Hue = (normal() * 55 + where) % 360
   } else {
-    Hue = Math.random() * 75 + 180
+    Hue = (normal() * 75 + 180 + where) % 360
   }
   return hsv2rgb([Hue, Math.random() * 60 + 20, Math.random() * 60 + 30])
 }
@@ -17,8 +21,9 @@ function setup() {
   createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
   let colors = []
+  let Hexplace = normal() * 360
   for (let i = 0; i < 500; i++) {
-    colors.push(getRandomColor())
+    colors.push(getRandomColor(Hexplace))
   }
   let singleHeight = CANVAS_HEIGHT / colors.length
 
