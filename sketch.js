@@ -33,8 +33,7 @@ function setup() {
   })
 
   var h1 = createElement("h1","格哈德·里希特的线")
-  var pass = createP("八月份的时候和朋友去看了格哈德·里希特的展，7副作品<a href='https://www.instagram.com/p/BXufBJLD0Xd'>看了拍了</a>俩小时，可以说是非常喜欢了。于是写了个页面，刷新生成新的线条。")
-  var ap = createP("原作地址： <a href='https://www.gerhard-richter.com/en/art/paintings/abstracts/strips-93'>Strip by Gerhard Richter</a>")
+  var ap = createP("<a href='https://www.gerhard-richter.com/en/art/paintings/abstracts/strips-93'>Strip by Gerhard Richter</a>")
 }
 
 function draw() {
@@ -43,8 +42,6 @@ function draw() {
   let heading = document.getElementsByTagName('h1')
   if (CANVAS_WIDTH < 1000) {
     p[0].style.fontSize = '30px'
-    p[0].style.lineHeight = '50px'
-    p[1].style.fontSize = '30px'
     heading[0].style.fontSize = '70px'
   }
   
