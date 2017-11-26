@@ -21,9 +21,10 @@ function setup() {
   createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT)
 
   let colors = []
-  let Hexplace = normal() * 360
+  let Hueplace = normal() * 60 + 140
+  console.log(Hueplace)
   for (let i = 0; i < 500; i++) {
-    colors.push(getRandomColor(Hexplace))
+    colors.push(getRandomColor(Hueplace))
   }
   let singleHeight = CANVAS_HEIGHT / colors.length
 
