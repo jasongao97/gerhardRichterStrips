@@ -1,5 +1,5 @@
 let CANVAS_WIDTH = document.documentElement.clientWidth - 160
-let CANVAS_HEIGHT = document.documentElement.clientHeight - 320
+let CANVAS_HEIGHT = Math.min(document.documentElement.clientHeight - 320, CANVAS_WIDTH)
 
 function getRandomColor(type) {
   let Hue
