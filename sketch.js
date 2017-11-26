@@ -1,5 +1,5 @@
 let CANVAS_WIDTH = document.documentElement.clientWidth - 160
-let CANVAS_HEIGHT = Math.min(document.documentElement.clientHeight - 300, CANVAS_WIDTH)
+let CANVAS_HEIGHT = Math.min(document.documentElement.clientHeight - 400, CANVAS_WIDTH + 200)
 
 function getRandomColor(type) {
   let Hue
@@ -33,8 +33,9 @@ function setup() {
     positionY += lineHeight
   })
 
-  var h2 = createElement("h1","Gerhard Richter's strips")
-  var pass = createP("The stripe configuration is not systematic, but the result of a partly random process. With not enough time to paint while preparing for his recent European retrospective, Richter turned to the computer, running a digital photo of one of his 1990 “scraped” paintings through software that essentially deconstructed it, dividing, mirroring and repeat- ing ever-reduced sections until the image was distilled to its chromatic essence. The formalist in Richter then took over, organizing the linear segments into unique compositions, 18 in this exhibition, ranging in size from moderate (20 by 56 inches) to monumental: 6 feet high and nearly 20 feet long, the largest bisected with minute vertical seams. All the prints are mounted between Plexiglas and aluminum.")
+  var h1 = createElement("h1","格哈德·里希特的线")
+  var pass = createP("八月份的时候和朋友去看了格哈德·里希特的展，虽说一共也就没展出几副作品也还是<a href='https://www.instagram.com/p/BXufBJLD0Xd'>看了拍了</a>俩小时，可以说是非常喜欢了。后来再想起来突然想写个生成类似抽象线条的程序，然后就有了这个页面。可惜不会机器学习，只好自己观察分析写了几条生成规律，等以后再升级！")
+  var ap = createP("<a href='https://www.gerhard-richter.com/en/art/paintings/abstracts/strips-93'>原作地址</a>")
 }
 
 function draw() {
